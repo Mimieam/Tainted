@@ -1,0 +1,291 @@
+$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+
+// bower:scss
+@import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
+// endbower
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 40px;
+        padding-bottom: 19px;
+    }
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+    .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+    }
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+    p + h4 {
+        margin-top: 28px;
+    }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+@media only screen and (min-width: 1075px) {
+    div.topic {
+        max-width: 1075px;
+    }
+    div.topic > * {
+        max-width: 450px;
+    }
+    div.topic > .float-container {
+        max-width: inherit;
+    }
+}
+
+.h2banner, h2, h3, .float-container {
+    clear: both;
+}
+
+.float-container > * {
+    float: left;
+    clear: left;
+    width: 450px;
+}
+.float-container > .float-right {
+    float: right;
+    clear: right;
+}
+
+.float-container > p:first-child, .float-container > div:first-child > p:first-child {
+    /* Hack to deal with margin outside float not overlapping with margin inside float */
+    margin-top: 0;
+}
+
+pre {
+    /* This style matches the diagrams */
+    background: hsl(60, 10%, 95%);
+    border-color: hsla(0, 0%, 70%, 0.5);
+    box-shadow: none;
+}
+
+button {
+    font-weight: bold;
+    font-size: inherit;
+    font-family: inherit;
+    border: 1px outset hsl(0, 24%, 95%);
+    border-radius: 4px;
+    background: hsl(0, 24%, 95%);
+    margin: 4px;
+    padding: 2px;
+    -webkit-appearance:none;
+    cursor: pointer;
+}
+    
+button.highlight {
+    border-color: hsl(0, 24%, 80%);
+    background: hsl(0, 24%, 80%);
+    box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.2);
+}
+    
+button:hover {
+    border-color: hsl(0, 48%, 46%);
+    background: hsl(0, 48%, 46%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 1px 1px 3px hsla(0, 0%, 0%, 0.5);
+}
+
+.diagram {
+    width: 450px;
+    text-align: center;
+}
+    
+// svg {
+//     pointer-events: visiblePainted;
+//     -webkit-user-select: none;
+//     -moz-user-select: none;
+//     user-select: none;
+// }
+
+// svg > * {
+//     pointer-events: none;
+// }
+
+text {
+    font-size: 11px;
+    text-anchor: middle;
+}
+
+#neighbors-cube text, #neighbors-axial text {
+    font-size: 16px;
+}
+
+#grid-axial text {
+    font-size: 13px;
+}
+
+.tile polygon, #diagram-map-storage-array rect {
+    pointer-events: visiblePainted;
+    fill: hsl(60, 10%, 95%);
+    stroke: hsl(0, 0%, 70%);
+    stroke-width: 0.5;
+}
+
+.tile.q-axis-same polygon { fill: hsl( 90, 20%, 87%); }
+.tile.r-axis-same polygon { fill: hsl(200, 15%, 90%); }
+.tile.s-axis-same polygon { fill: hsl(300, 10%, 90%); }
+.tile.q-axis-same.r-axis-same polygon { fill: hsl(60, 10%, 95%); }
+.tile.q-axis-same tspan.q { fill: hsl( 90, 100%, 35%); font-weight: bold; }
+.tile.r-axis-same tspan.r { fill: hsl(200, 100%, 45%); font-weight: bold; }
+.tile.s-axis-same tspan.s { fill: hsl(300,  80%, 50%); font-weight: bold; }
+
+line.x-axis { stroke: hsl( 90, 100%, 35%); stroke-width: 2px; }
+line.y-axis { stroke: hsl(300,  80%, 50%); stroke-width: 2px; }
+line.z-axis { stroke: hsl(200, 100%, 45%); stroke-width: 2px; }
+
+#diagram-distances text { fill: hsl(0, 0%, 80%); }
+#diagram-distances tspan.highlight { font-weight: bold; }
+#diagram-distances tspan.q.highlight { fill: hsl( 90, 100%, 35%); }
+#diagram-distances tspan.r.highlight { fill: hsl(200, 100%, 45%); }
+#diagram-distances tspan.s.highlight { fill: hsl(300,  80%, 50%); }
+
+#diagram-hex-to-pixel path { fill: hsl(200, 50%, 70%); fill-opacity: 0.5; stroke: hsl(200, 50%, 30%); stroke-width: 1.0; stroke-opacity: 0.3; }
+#diagram-pixel-to-hex .highlight polygon { fill: hsl(200, 50%, 80%); }
+
+#diagram-line .selected polygon {fill: hsl(200, 50%, 80%); }
+
+.neighbors-code span.highlight { background: hsl(200, 50%, 80%); }
+.neighbors .highlight polygon { fill: hsl(200, 50%, 80%); }
+#neighbors-diagonal .highlight polygon { fill: hsl(200, 20%, 90%); }
+
+#diagram-field-of-view .shadow  polygon { fill: hsl(250,   5%, 80%); }
+#diagram-field-of-view .blocked polygon { fill: hsl(200,  50%, 70%); }
+#diagram-field-of-view .center  polygon { fill: hsl(120,  50%, 70%); }
+
+#diagram-rotation .right2 polygon { fill: hsl(300, 20%, 80%); }
+#diagram-rotation .left2  polygon { fill: hsl(120, 20%, 80%); }
+#diagram-rotation .right1 polygon { fill: hsl(300, 40%, 80%); }
+#diagram-rotation .left1  polygon { fill: hsl(120, 40%, 80%); }
+#diagram-rotation .opposite polygon { fill: hsl(200, 20%, 80%); }
+#diagram-rotation .center polygon { fill: hsl(  0,  0%, 60%); }
+#diagram-rotation .target polygon { fill: hsl(200, 50%, 80%); }
+#diagram-rotation .arrow { fill-opacity: 0.5; stroke-width: 1.0; stroke-opacity: 0.3; }
+#diagram-rotation .arrow.right  { fill: hsl(300, 50%, 70%); stroke: hsl(300, 50%, 30%); }
+#diagram-rotation .arrow.left   { fill: hsl(120, 50%, 70%); stroke: hsl(120, 50%, 30%); }
+#diagram-rotation .arrow.target { fill: hsl(200, 50%, 70%); stroke: hsl(200, 50%, 30%); }
+#diagram-rotation text { fill: hsl(0, 0%, 80%); }
+#diagram-rotation .left1 text,
+#diagram-rotation .left2 text,
+#diagram-rotation .right1 text,
+#diagram-rotation .right2 text,
+#diagram-rotation .opposite text,
+#diagram-rotation .target text,
+#diagram-rotation .center text { fill: hsl(0, 0%, 0%); }
+
+#diagram-rings .arrow,
+#diagram-spiral .arrow
+{ fill: hsl(200, 50%, 50%); fill-opacity: 0.5; stroke: hsl(200, 50%, 30%); stroke-width: 1.0; stroke-opacity: 0.3; }
+#diagram-rings .arrow-first
+{ fill: hsl(200, 0%, 50%); stroke: hsl(200, 0%, 50%); }
+#diagram-rings .ring polygon,
+#diagram-spiral .ring polygon
+{ fill: hsl(200, 50%, 80%); }
+
+#diagram-hex-range .region polygon { fill:hsl(200,  40%, 80%); }
+#diagram-hex-range line { stroke-opacity: 50%; }
+
+#diagram-intersection .regionA polygon { fill:hsl(200,  40%, 80%); }
+#diagram-intersection .regionB polygon { fill:hsl(300,  20%, 80%); }
+#diagram-intersection .regionC polygon { fill:hsl(120,  20%, 80%); }
+#diagram-intersection .center  polygon { fill:hsl(200,  50%, 70%); }
+
+#diagram-movement-range .blocked polygon { fill: hsl(200,  50%, 70%); }
+#diagram-movement-range .center  polygon { fill: hsl(120,  50%, 70%); }
+
+#diagram-map-storage-array .samerow rect,
+#diagram-map-storage-shape .samerow polygon { fill: hsl(200, 20%, 90%); }
+#diagram-map-storage-array .highlight rect,
+#diagram-map-storage-shape .highlight polygon { fill: hsl(200, 50%, 80%); }
+#diagram-map-storage-array .unused rect { fill: hsl(0, 0%, 80%); }
+
+#diagram-wraparound .wrapped polygon { fill: hsl(300, 5%, 80%); }
+#diagram-wraparound .wrapped.parity polygon { fill: hsl(120, 5%, 85%); }
+#diagram-wraparound .wrapped.center polygon { fill: hsl(200, 10%, 70%); }
+#diagram-wraparound .highlight polygon { fill: hsl(200, 50%, 80%); }
+#diagram-wraparound .wrapped.highlight polygon { fill: hsl(200, 40%, 90%); }
+
+circle.marker {
+    fill: #a44;
+}
+
+line.marker, path.marker {
+    stroke: #a44;
+    stroke-width: 3px;
+}
+
+.grid-vertical path, .grid-horizontal path {
+    fill: none;
+    stroke-dasharray: 4, 3;
+    stroke-width: 1px;
+    stroke: hsl(0, 0%, 75%);
+}

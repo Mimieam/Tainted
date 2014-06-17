@@ -1,0 +1,2 @@
+# helper.coffee
+using 'strict'
